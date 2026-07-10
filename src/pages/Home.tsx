@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import TechStack from "../components/TechStack";
 import Projects from "../components/Projects";
 import Testimonials from "../components/Testimonials";
+import GitHubContributions from "../components/GitHubContributions";
 import Footer from "../components/Footer";
 import heroImage from "../assets/ochibo_converted.webp";
 
@@ -58,6 +59,13 @@ const Home = () => {
           </div>
 
         </div>
+      </section>
+
+      {/* ========================= */}
+      {/* GitHub Contributions */}
+      {/* ========================= */}
+      <section className="py-16">
+        <GitHubContributions />
       </section>
 
       {/* ========================= */}

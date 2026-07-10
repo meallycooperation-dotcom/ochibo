@@ -11,7 +11,6 @@ import type { FormEvent } from "react";
 
 import {
   FaGithub,
-  FaLinkedin,
   FaXTwitter,
   FaInstagram,
 } from "react-icons/fa6";
