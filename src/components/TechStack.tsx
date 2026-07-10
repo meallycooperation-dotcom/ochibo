@@ -171,11 +171,7 @@ const TechStack = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-400 leading-7">
-                  Building high-performance,
-                  scalable and beautiful applications
-                  using modern best practices.
-                </p>
+                
 
                 {/* Floating Circle */}
                 <motion.div
