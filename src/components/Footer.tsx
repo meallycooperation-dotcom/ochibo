@@ -55,7 +55,7 @@ const Footer = () => {
             <div className="flex gap-4 mt-8">
 
               <a
-                href="https://github.com/"
+                href="https://github.com/meallycooperation-dotcom"
                 target="_blank"
                 rel="noreferrer"
                 className="h-11 w-11 rounded-full bg-orange-100 border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition"
@@ -73,7 +73,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://twitter.com/"
+                href="https://x.com/wipedlensproduction"
                 target="_blank"
                 rel="noreferrer"
                 className="h-11 w-11 rounded-full bg-orange-100 border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition"
@@ -82,7 +82,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://instagram.com/"
+                href="https://www.instagram.com/wiped_lens_production/"
                 target="_blank"
                 rel="noreferrer"
                 className="h-11 w-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-cyan-500 transition"

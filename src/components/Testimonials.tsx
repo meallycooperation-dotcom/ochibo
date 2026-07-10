@@ -16,7 +16,7 @@ type ReviewItem = {
   created_at: string | null;
 };
 
-const fallbackAvatar = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200";
+const fallbackAvatar = "https://img.freepik.com/premium-vector/profile-picture-placeholder-avatar-silhouette-gray-tones-icon-colored-shapes-gradient_1076610-40164.jpg";
 
 const Testimonials = () => {
   const [reviews, setReviews] = useState<ReviewItem[]>([]);

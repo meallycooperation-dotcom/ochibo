@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   ArrowRight,
   Calendar,
@@ -38,6 +39,7 @@ const fallbackImage =
   "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200";
 
 const Blog = () => {
+  const navigate = useNavigate();
   const [blogs, setBlogs] = useState<BlogItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -129,7 +131,10 @@ const Blog = () => {
                 {featuredBlog.excerpt ?? "A recent article from the journal."}
               </p>
 
-              <button className="mt-10 flex items-center gap-2 text-orange-500 hover:gap-4 transition-all">
+              <button
+                onClick={() => featuredBlog && navigate(`/blog/${featuredBlog.slug}`)}
+                className="mt-10 flex items-center gap-2 text-orange-500 hover:gap-4 transition-all"
+              >
                 Read Article
                 <ArrowRight size={18} />
               </button>
@@ -230,7 +235,10 @@ const Blog = () => {
                         {tag}
                       </div>
 
-                      <button className="flex items-center gap-2 hover:text-orange-500 transition">
+                      <button
+                        onClick={() => navigate(`/blog/${blog.slug}`)}
+                        className="flex items-center gap-2 hover:text-orange-500 transition"
+                      >
                         Read
                         <ArrowRight size={18} />
                       </button>

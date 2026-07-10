@@ -5,8 +5,10 @@ import {
   Quote,
   Filter,
   ArrowRight,
+  Plus,
 } from "lucide-react";
 import { getSupabaseImageUrl, supabase } from "../lib/supabase";
+import ReviewModal from "../components/ReviewModal";
 
 type ReviewItem = {
   id: string;
@@ -21,12 +23,13 @@ type ReviewItem = {
   created_at: string | null;
 };
 
-const fallbackAvatar = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200";
+const fallbackAvatar = "https://img.freepik.com/premium-vector/profile-picture-placeholder-avatar-silhouette-gray-tones-icon-colored-shapes-gradient_1076610-40164.jpg";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState<ReviewItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     const loadReviews = async () => {
@@ -86,7 +89,7 @@ const Reviews = () => {
             transition={{ delay: 0.2 }}
             className="text-gray-600 text-lg mt-8 max-w-3xl leading-8"
           >
-            Every successful project is built on trust, communication and quality. Here’s what clients have to say about working with me.
+            Every successful project is built on trust, communication and quality. Here's what clients have to say about working with me.
           </motion.p>
         </div>
       </section>
@@ -155,7 +158,7 @@ const Reviews = () => {
                 >
                   <Quote className="text-orange-500 mb-6" size={34} />
 
-                  <p className="text-gray-300 leading-8 text-lg">“{review.review}”</p>
+                  <p className="text-gray-300 leading-8 text-lg">"{review.review}"</p>
 
                   <div className="flex mt-8">
                     {[...Array(rating)].map((_, i) => (
@@ -186,6 +189,16 @@ const Reviews = () => {
           </div>
         )}
       </section>
+
+      {/* Floating Button */}
+      <button
+        onClick={() => setModalOpen(true)}
+        className="fixed bottom-8 right-8 z-50 h-14 w-14 rounded-full bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-500/30 flex items-center justify-center transition"
+      >
+        <Plus size={26} />
+      </button>
+
+      <ReviewModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </main>
   );
 };

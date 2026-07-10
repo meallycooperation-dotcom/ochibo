@@ -224,21 +224,17 @@ const Contact = () => {
 
             <div className="flex gap-4">
 
-              <button className="w-12 h-12 rounded-full bg-white border border-orange-200 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition flex items-center justify-center">
+              <a href="https://github.com/meallycooperation-dotcom" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-white border border-orange-200 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition flex items-center justify-center">
                 <FaGithub />
-              </button>
+              </a>
 
-              <button className="w-12 h-12 rounded-full bg-white border border-orange-200 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition flex items-center justify-center">
-                <FaLinkedin />
-              </button>
-
-              <button className="w-12 h-12 rounded-full bg-white border border-orange-200 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition flex items-center justify-center">
+              <a href="https://x.com/wipedlensproduction" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-white border border-orange-200 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition flex items-center justify-center">
                 <FaXTwitter />
-              </button>
+              </a>
 
-              <button className="w-12 h-12 rounded-full bg-white border border-orange-200 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition flex items-center justify-center">
+              <a href="https://www.instagram.com/wiped_lens_production/" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-white border border-orange-200 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition flex items-center justify-center">
                 <FaInstagram />
-              </button>
+              </a>
 
             </div>
 
